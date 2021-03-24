@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
+Anushka Pradhan
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -17,36 +17,40 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+This code creates an HTML canvas that displays various items when one of the four buttons available is pressed. One button draws a rectangle on the canvas, another one draws writes my name (Anushka Pradhan), the third one displays an image on the canvas,and the fourth one clears the whole canvas.  
  
 Known Issues:
-blah, blah, blah, blah
-https://www.w3schools.com/w3css/default.asp
-https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
--->
+No issues found as of 3/24/2021
+https://www.w3schools.com/w3css/default.asp (a resource for learning coding)
+https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file (a resource for having multiple pages in one HTML page)
+-->  
+<!-- The <!-- indicates that this is a function for clarification from the author that is inteneded to not be displayed  -->
 	
-   <head> 
-      <title>App6---HTML5-Canvas</title>  
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="apple-mobile-web-app-capable" content="yes">
-      <link rel="stylesheet" href="w3.css">
-      <link rel="stylesheet" href="w3-colors-flat.css">
-   </head> 
+   <head><!-- Putting the style sheets requires you to put it the <head> section of the the HTML page -->
+      <title>App6---HTML5-Canvas</title>  <!--<title> indidicates that our title will be "App6---HTML5-Canvas" -->
+      <meta name="viewport" content="width=device-width, initial-scale=1"><!-- the <meta> tag is for important information that is not intended to be displayed in the final app -->
+      <meta name="apple-mobile-web-app-capable" content="yes"><!-- Defines that the app is able to be viewed/used in an apple device -->
+      <link rel="stylesheet" href="w3.css"><!--This and the line below is an external style sheet that is used to define the style for many HTML pages; The w3.css is a class used with HTML container elements such as <header>, <footer>, among others -->		
+      <link rel="stylesheet" href="w3-colors-flat.css"><!-- This indicates a flat color for the app, a solid non-gradient color scheme -->
+   </head> <!-- This indicates the end of the <head> function, notice the slash -->
 
 
-<script>
+<script>//The <script> is a HTML element allows for manipulation of the embedded content.
+	// The following code lets you know when the file was last modified
+	// This will help you know if you are looking at the new version of the file or if there is a delay on GitHub.	
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
-</script>
+</script> <!--  This idicates the end of the script element --> 
+	
 
 
 
-<style>	
+<style>/*The <style> is an HTML elemenet that is used to define internal CSS, which is used to create a unique style to an HTML element*/
 .body {
-     margin: 0em;
+     margin: 0em; /*The margin is for the amount of space that we want outside of the border*/
 }
-.page {
+.page {/* This indicates a new domain and the codes below deines its formatting */
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -54,29 +58,30 @@ console.log("This file last modified " + docMod); // generates message in javaSc
     left: -100vw;
     overflow-y: auto;
     z-index: 0;
-    background-color: hsl(0,0%,100%);
+    background-color: hsl(0,0%,100%);/* This indicates the color of the app background*/
 }
   .page:target {
     left: 0vw;
-    z-index: 1;
+    z-index: 1; /* z-index brings you to the top of each page that it is targeted towards; requires you to assign pages to a <div> such as <div class ="name of page"> as seen below */
 }
 </style>
 
-<body>
-<div id="header" class="w3-container w3-flat-carrot">
-	<h1>App6---HTML5-Canvas</h1>
-</div>
 	
-<div id="content" class="w3-container">
-	<p>Content goes here.</p>
+<body><!-- <body> contains the content that is inteted to be displayed -->
+<div id="header" class="w3-container w3-flat-carrot"><!--the w3-flat-carrot makes the header color orange -->
+	<h1>App6---HTML5-Canvas</h1><!--<h1> indicates the top heading and the text displayed -->
+</div><!--This function is for divisions within the body (mainly for formatting) -->
+	
+<div id="content" class="w3-container"><!--Indicates a space for displaying our text-->
+	<p>Content goes here.</p><!-- <p> </p> indicates a paragraph; Where the title can be written-->
 		
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
-<footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>DIY!</p>
+<footer class="w3-bottom w3-container w3-flat-carrot"><!-- This indicates a footer and its appearance -->
+	<p>DIY!</p><!--A text displayed in the footer -->
 </footer>
 
-</body>
-</html>
+</body><!--This indicates the end of the body -->
+</html>	<!--This indicates the end of the code -->	   
