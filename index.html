@@ -46,9 +46,18 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	function myFunction() {// This function draws the rectangle onto the canvas
 		var c = document.getElementById("myCanvas"); //finds the canvas element
-		var ctx = c.getContext("2d");//A HTML object with properties to draw on teh canvas
+		var ctx = c.getContext("2d");//A HTML object with properties to draw on the canvas
 		ctx.fillStyle = "#f4a460";// Draws the rectangle onto the canvas and makes it a pale orange color
 		ctx.fillRect(20, 20, 250, 150);//Defines the x and y coordinates and the width and height of the object
+		}
+	
+	function myName() {//This function is to write text on the canvas
+		var canvas = document.getElementById("myCanvas"); //finds the canvas element
+		var ctx=canvas.getContext("2d"); // A HTML object with properties to draw on the canvas
+		ctx.font="30px Comic Sans MS"; //Defines the font and size of the text
+		ctx.fillStyle = "orange"; //Defines the color of the text
+		ctx.textAlign = "center"; // Defines where the text will be aligned on the canvas
+		ctx.fillText("Anushka Pradhan", canvas.width/2, canvas.height/2); //Draws filled text on the canvas
 		}
 
 	
@@ -133,7 +142,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div class="center"> <!-- Helps identify our button to so that we can center it -->
 	<button onclick="myFunction();"class="w3-button w3-hover-amber w3-orange">Draw Rectangle</button> <!-- A button function, that draws a rectangle on the canvas when clicked -->
-	<button onclick="myFunction();"class="w3-button w3-orange"> Write Name</button> <!-- Write name when clicked -->
+	<button onclick="myName();"class="w3-button w3-orange"> Write Name</button> <!-- Writes name when clicked -->
   	<button onclick="myFunction();"class="w3-button w3-orange"> Display Image</button> <!-- Displays image -->
  	<button onclick="myFunction();"class="w3-button w3-red"> Clear All</button> <!--Clears the entire canvas -->
 	</div> <!-- the end of this division -->
