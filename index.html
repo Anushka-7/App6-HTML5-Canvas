@@ -26,14 +26,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 -->  
 <!-- The <!-- indicates that this is a function for clarification from the author that is inteneded to not be displayed  -->
 	
-   <head><!-- Putting the style sheets requires you to put it the <head> section of the the HTML page -->
+<head><!-- Putting the style sheets requires you to put it the <head> section of the the HTML page -->
       <title>App6-HTML5-Canvas</title>  <!--<title> indidicates that our title will be "App6---HTML5-Canvas" -->
       <meta name="viewport" content="width=device-width, initial-scale=1"><!-- the <meta> tag is for important information that is not intended to be displayed in the final app -->
       <meta name="apple-mobile-web-app-capable" content="yes"><!-- Defines that the app is able to be viewed/used in an apple device -->
       <link rel="stylesheet" href="w3.css"><!--This and the line below is an external style sheet that is used to define the style for many HTML pages; The w3.css is a class used with HTML container elements such as <header>, <footer>, among others -->		
       <link rel="stylesheet" href="w3-colors-flat.css"><!-- This indicates a flat color for the app, a solid non-gradient color scheme -->
 
-   </head> <!-- This indicates the end of the <head> function, notice the slash -->
+</head> <!-- This indicates the end of the <head> function, notice the slash -->
 
 
 <script>//The <script> is a HTML element allows for manipulation of the embedded content.
@@ -44,11 +44,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 	console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 	
-	function myFunction() {
+	function myFunction() {// This function draws the rectangle onto the canvas
 		var c = document.getElementById("myCanvas"); //finds the canvas element
 		var ctx = c.getContext("2d");//A HTML object with properties to draw on teh canvas
 		ctx.fillStyle = "#f4a460";// Draws the rectangle onto the canvas and makes it a pale orange color
-		ctx.fillRect(20, 20, 150, 100);//Defines the x and y coordinates and the width and height of the object
+		ctx.fillRect(20, 20, 250, 150);//Defines the x and y coordinates and the width and height of the object
 		}
 
 	
@@ -69,8 +69,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     z-index: 0;
     background-color: hsl(0,0%,100%);/* This indicates the color of the app background*/
 }
-canvas {
-    padding-left: 0;
+canvas {/* This is the formatting for the canvas */
+    padding-left: 0; 
     padding-right: 0;
     margin-left: auto;
     margin-right: auto;
@@ -81,15 +81,14 @@ canvas {
     left: 0vw;
     z-index: 1; /* z-index brings you to the top of each page that it is targeted towards; requires you to assign pages to a <div> such as <div class ="name of page"> as seen below */
 }
-.center {
+.center { /* This code is to help center my button on the website */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
+  justify-content: center; 
+  align-items: center; /* Determines where the button will be aligned*/
+  height: 200px; /*Determing vertical position of the button*/
 }
 	
 </style>
-
 	
 <body><!-- <body> contains the content that is inteted to be displayed -->
 <div id="header" class="w3-container w3-flat-carrot"><!--the w3-flat-carrot makes the header color orange -->
@@ -102,9 +101,9 @@ canvas {
 	<canvas id="myCanvas" width="800" height="400"style="border:1px solid #000000;"></canvas> <!-- The code about codes for a canvas on my web page -->
 	<!-- The width= 800 and height=500 determines the size of the displayed canvas; The canvas id = canvas makes it identifiable when we chose to use functions and manipulate it. -->
 	
-	<div class="center">
-		<button onclick="myFunction();"class="w3-button w3-hover-amber w3-orange">Draw Rectangle</button>
-	</div>
+	<div class="center"> <!-- Helps identify our button to so that we can center it -->
+	<button onclick="myFunction();"class="w3-button w3-hover-amber w3-orange">Draw Rectangle</button> <!-- A button function, that draws a rectangle on the canvas when clicked -->
+	</div> <!-- the end of this division -->
 		
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
