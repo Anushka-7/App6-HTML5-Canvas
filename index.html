@@ -60,29 +60,31 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		ctx.fillText("Anushka Pradhan", canvas.width/2, canvas.height/2); //Draws filled text on the canvas
 		}
 	
-	function myCanvas() {
-		var img=document.createElement('img');
-		img.src='https://i.pinimg.com/originals/2e/e2/53/2ee253d603bb1be4fda8c54a929dbcdb.png';
-		img.onload = function () {
-		var c=document.getElementById('myCanvas');
-		var ctx=c.getContext('2d');
-		ctx.drawImage(img,520,90,250,250);
+	function myCanvas() {//This function is to display an image on the canvas
+		var img=document.createElement('img');//Finds the image
+		img.src='https://i.pinimg.com/originals/2e/e2/53/2ee253d603bb1be4fda8c54a929dbcdb.png'; //Source of the image
+		img.onload = function () { //Loads the image
+		var c=document.getElementById('myCanvas'); //Indentifies the canvas
+		var ctx=c.getContext('2d'); //Defines the image as a 2d property
+		ctx.drawImage(img,520,90,250,250); // x and y coordinates & the width and height of the image
 		}
 		}
 	
-	function clearAll() {
-  	 	var canvas=document.getElementById("myCanvas");
-   	 	var context=canvas.getContext("2d");
-   	 	context.clearRect(0,0,canvas.width,canvas.height);
+	function clearAll() { //This function clears the entire canvas when clicked 
+  	 	var canvas=document.getElementById("myCanvas"); //Identifies our canvas
+   	 	var context=canvas.getContext("2d"); //Function returns the drawing context - which is an object that has all the drawing properties and functions you use to draw on the canvas.
+   	 	context.clearRect(0,0,canvas.width,canvas.height);//Determines how much of the canvas area to clear
 		}
 	
 </script> <!--  This idicates the end of the script element --> 
 	
 	
 <style>/*The <style> is an HTML elemenet that is used to define internal CSS, which is used to create a unique style to an HTML element*/
-.body {
+	
+.body {/* Start of the body function*/
      margin: 0em; /*The margin is for the amount of space that we want outside of the border*/
 }
+	
 .page {/* This indicates a new domain and the codes below deines its formatting */
     width: 100vw;
     height: 100vh;
@@ -94,25 +96,30 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     background-color: hsl(0,0%,100%);/* This indicates the color of the app background*/
 }
 	
-/*canvas {/* This is the formatting for the canvas 
+/*
+canvas {/* This is the formatting for the canvas 
     padding-left: 0; 
     padding-right: 0;
     margin-left: auto;
     margin-right: auto;
     display: block;
     width: 800px;
-} - This code helps to format the canvas on the page but I decided not to center the canvas */
+} This code helps to format the canvas on the page but I decided not to center the canvas */
 	
   .page:target {
     left: 0vw;
     z-index: 1; /* z-index brings you to the top of each page that it is targeted towards; requires you to assign pages to a <div> such as <div class ="name of page"> as seen below */
 }
-/*.center { /* This code is to help center my button on the website 
+
+/*
+.center { /* This code is to help center my button on the website 
   display: flex;
   justify-content: center; 
   align-items: center; Determines where the button will be aligned
   height: 200px; Determing vertical position of the button
-} - Decided not to center my buttons */
+} 
+
+Decided not to center my buttons but is for future reference */
 	
 .btn-group button { /* Helps to format my button side by side on the website*/
   background-color: #f4a460; /* Orange background */
@@ -120,24 +127,25 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   color: white; /* White text */
   padding: 10px 24px; /* Some padding */
   float: left; /* Float the buttons side by side */
-  margin: center;
-  display: flex;
-  flex-direction: per;
-  justify-content: center;
+  margin: center; /* Position of button on the website */
+  display: flex; /* A responsive property that helps size the lenght of objects, in this case the buttons */
+  flex-direction: per; /* sets how flex items (the buttons) are placed in the flex container (canvas) */
+  justify-content: center; /* Placement of container on the website */
 }
 
-/* Clear floats (clearfix hack) */
+/* The group of code below clears floats (clearfix hack) */
 .btn-group:after {
   content: "";
   clear: both;
   display: table;
 }
 
+/* The group of code below prevents double borders on the 4 buttons */
 .btn-group button:not(:last-child) {
-  border-right: none; /* Prevent double borders */
+  border-right: none; 
 }
 
-</style>
+</style><!--End of the style attribute -->
 	
 <body><!-- <body> contains the content that is inteted to be displayed -->
 <div id="header" class="w3-container w3-flat-carrot"><!--the w3-flat-carrot makes the header color orange -->
@@ -161,13 +169,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
-</div>
+</div> <!-- End of division-->
 	
-<footer class="w3-bottom w3-container w3-flat-carrot"><!-- This indicates a footer and its appearance -->
+<footer class="w3-bottom w3-container w3-flat-carrot"><!-- This indicates the footer's appearance -->
 
 <p>DIY!</p><!--A text displayed in the footer -->
 	
-</footer>
+</footer><!-- Indicates a footer -->
 
 </body><!--This indicates the end of the body -->
 </html>	<!--This indicates the end of the code -->	   
