@@ -69,7 +69,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		ctx.drawImage(img,520,90,250,250);
 		}
 		}
-
+	
+	function clearAll() {
+  	 	var canvas=document.getElementById("myCanvas");
+   	 	var context=canvas.getContext("2d");
+   	 	context.clearRect(0,0,canvas.width,canvas.height);
+		}
 	
 </script> <!--  This idicates the end of the script element --> 
 	
@@ -149,7 +154,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<button onclick="myFunction();"class="w3-button w3-hover-amber w3-orange">Draw Rectangle</button> <!-- A button function, that draws a rectangle on the canvas when clicked -->
 	<button onclick="myName();"class="w3-button w3-hover-amber w3-orange"> Write Name</button> <!-- Writes name when clicked -->
   	<button onclick="myCanvas()"class="w3-button w3-hover-amber w3-orange"> Display Image</button> <!-- Displays image -->
-	<button onclick="myFunction();"class="w3-button w3-hover-pale-red w3-red"> Clear All</button> <!--Clears the entire canvas -->
+	<button onclick="clearAll();"class="w3-button w3-hover-pale-red w3-red"> Clear All</button> <!--Clears the entire canvas -->
 	</div> <!-- the end of this division -->
 		
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
